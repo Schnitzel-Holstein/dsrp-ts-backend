@@ -1,0 +1,12 @@
+# Compiled things
+dist/*
+# Node modules
+node_modules/*
+
+# Code editors
+.idea/*
+.vscode/*
+
+# Config files
+config/development.ts
+config/production.ts
