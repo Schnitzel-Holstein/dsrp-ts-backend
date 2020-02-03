@@ -1,0 +1,125 @@
+{
+    "total": 2,
+    "users": [
+        {
+            "id": "1",
+            "username": "Adriancito el travesti",
+            "messages": 50,
+            "lastRequest": "2020-02-03T20:00:11.971Z",
+            "createdAt": "2020-02-03T20:00:11.971Z",
+            "UpdateAt": "2020-02-03T20:00:11.971Z",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "dinero",
+                    "value": "5500000",
+                    "displayOnProfile": true,
+                    "displayOnPost": true,
+                    "displayToUser": true
+                },
+                {
+                    "id": 2,
+                    "name": "nivel",
+                    "value": "2",
+                    "displayOnProfile": true,
+                    "displayOnPost": true,
+                    "displayToUser": true
+                },
+                {
+                    "id": 3,
+                    "name": "Es marico",
+                    "value": "Si, lo es",
+                    "displayOnProfile": true,
+                    "displayOnPost": true,
+                    "displayToUser": false
+                }
+            ],
+            "roles": [
+                {
+                    "id": 1,
+                    "name": "Usuario",
+                    "color": "black",
+                    "type": "general",
+                    "isActive": true
+                },
+                {
+                    "id": 2,
+                    "name": "Travestis",
+                    "color": "pink",
+                    "type": "faction",
+                    "isActive": true
+                },
+                {
+                    "id": 3,
+                    "name": "Chupador maestro",
+                    "color": "blue",
+                    "image": "https://el_chupador.com/adriancito.jpg",
+                    "type": "rank",
+                    "isActive": true
+                }
+            ],
+            "avatar": "https://marico_el_que.lo/lea/avatar1.jpg",
+            "signature": "ayaya!"
+        },
+        {
+            "id": "25",
+            "username": "Pepe",
+            "messages": 50,
+            "lastRequest": "2020-02-03T20:00:11.971Z",
+            "createdAt": "2020-02-03T20:00:11.971Z",
+            "UpdateAt": "2020-02-03T20:00:11.971Z",
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "dinero",
+                    "value": "0",
+                    "displayOnProfile": true,
+                    "displayOnPost": true,
+                    "displayToUser": true
+                },
+                {
+                    "id": 2,
+                    "name": "nivel",
+                    "value": "999",
+                    "displayOnProfile": true,
+                    "displayOnPost": true,
+                    "displayToUser": true
+                },
+                {
+                    "id": 3,
+                    "name": "Es marico",
+                    "value": null,
+                    "displayOnProfile": true,
+                    "displayOnPost": true,
+                    "displayToUser": false
+                }
+            ],
+            "roles": [
+                {
+                    "id": 1,
+                    "name": "Usuario",
+                    "color": "black",
+                    "type": "general",
+                    "isActive": true
+                },
+                {
+                    "id": 5,
+                    "name": "Memes",
+                    "color": "#efefef",
+                    "type": "faction",
+                    "isActive": true
+                },
+                {
+                    "id": 25,
+                    "name": "Ranas",
+                    "color": "blue",
+                    "image": "https://pepe.rana/imagen.jpg",
+                    "type": "rank",
+                    "isActive": true
+                }
+            ],
+            "avatar": "https://marico_el_que.lo/lea/avatar2.jpg",
+            "signature": "sad pepe"
+        }
+    ]
+}
