@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS threads(
     name text not null,
     slug text unique not null,
     description text,
+    is_closed boolean default false,
     created_by bigint references users(id) not null,
     created_at timestamp without time zone default now(),
     updated_at timestamp without time zone default now()
