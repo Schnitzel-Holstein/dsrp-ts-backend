@@ -1,20 +1,29 @@
 // Server
 import Server from './classes/server';
 
-// Routes
-//import userRoutes from './routes/user.route';
-
+// Dependencies
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import Morgan from 'morgan';
-import errorMiddleware from './middlewares/error.middleware';
-import HttpException from './exceptions/HttpException';
 import config = require('./config');
 
-const server = new Server(config.http.port);
+// Exceptions
+import HttpException from './exceptions/HttpException';
 
-// Load user info
-//server.app.use(userRequestInfo);
+// Middlewares
+import errorMiddleware from './middlewares/error.middleware';
+import userBannedMiddleware from './middlewares/user_banned.middleware';
+
+// Routes
+import userRoutes from './routes/user.route';
+import threadRouter from './routes/thread.route';
+import postRouter from './routes/post.route';
+import userRolesRouter from './routes/user_roles.route';
+import userExtraFieldRouter from './routes/user_extra_field.route';
+import forumRouter from './routes/forum.route';
+
+
+const server = new Server(config.http.port);
 
 // Body parser
 server.app.use(bodyParser.urlencoded({extended:true}));
@@ -26,8 +35,16 @@ server.app.use(Morgan('dev'))
 // Configure CORS
 server.app.use(cors({origin: true, credentials: true}));
 
+// If the user is banned, always return 403
+server.app.use(userBannedMiddleware);
+
 // Routes
-//server.app.use('/user', userRoutes);
+server.app.use('/user', userRoutes);
+server.app.use('/user-roles', userRolesRouter);
+server.app.use('/user-fields', userExtraFieldRouter);
+server.app.use('/forum', forumRouter);
+server.app.use('/thread', threadRouter);
+server.app.use('/post', postRouter);
 
 
 // catch 404 and forward to error handler

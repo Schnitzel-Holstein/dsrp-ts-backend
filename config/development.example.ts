@@ -17,5 +17,10 @@ export = {
                 console.log(`Error with query "${e.query}"`);
             }
         }
+    },
+    jwt: {
+        key: 'A nice and strong key here',
+        caducity: '30d'
     }
+
 };

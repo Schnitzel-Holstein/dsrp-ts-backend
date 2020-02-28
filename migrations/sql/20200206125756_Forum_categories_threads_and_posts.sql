@@ -8,7 +8,7 @@ insert into migrations (id) values (20200206125756);
 -- Forum tree
 CREATE TABLE IF NOT EXISTS forums(
     id bigserial primary key,
-    parent_forum bigint references forums(id),
+    parent_forum bigint references forums(id) on delete cascade,
     name text not null,
     slug text unique not null,
     description text,
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS forums(
 -- Forum -> thread
 CREATE TABLE IF NOT EXISTS threads(
     id bigserial primary key,
-    parent_forum bigint references forums(id) not null,
+    parent_forum bigint references forums(id) on delete cascade not null,
     name text not null,
     slug text unique not null,
     description text,
@@ -28,14 +28,15 @@ CREATE TABLE IF NOT EXISTS threads(
     created_at timestamp without time zone default now(),
     updated_at timestamp without time zone default now()
 );
+
 -- Thread -> post
 CREATE TABLE IF NOT EXISTS posts(
     id bigserial primary key,
-    parent_thread bigint references threads(id),
+    parent_thread bigint references threads(id) on delete cascade,
     name text,
     description text,
     content text not null,
-    created_by bigint references users(id),
+    created_by bigint references users(id) not null,
     created_at timestamp without time zone default now(),
     updated_at timestamp without time zone default now()
 );

@@ -1,0 +1,5504 @@
+{
+	"info": {
+		"_postman_id": "86742fa8-83e6-424d-8180-625b27d8c36b",
+		"name": "DSRPG API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Roles",
+					"item": [
+						{
+							"name": "Get roles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/user-roles?",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-roles"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "faction",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get roles with filter",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-roles?type=general",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles"
+											],
+											"query": [
+												{
+													"key": "type",
+													"value": "general"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "320"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"140-7P8mTKh6tlIGJUsuATiiCWt5st0\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:49:01 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": \"2\",\n    \"roles\": [\n        {\n            \"id\": \"1\",\n            \"name\": \"user\",\n            \"color\": null,\n            \"image\": null,\n            \"type\": \"general\",\n            \"created_at\": \"2020-02-25T07:45:03.453Z\",\n            \"updated_at\": \"2020-02-25T07:45:03.453Z\"\n        },\n        {\n            \"id\": \"2\",\n            \"name\": \"admin\",\n            \"color\": null,\n            \"image\": null,\n            \"type\": \"general\",\n            \"created_at\": \"2020-02-25T07:45:03.453Z\",\n            \"updated_at\": \"2020-02-25T07:45:03.453Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get roles with another filter",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-roles?type=rank",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles"
+											],
+											"query": [
+												{
+													"key": "type",
+													"value": "rank"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "24"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"18-/DlDJSSjADHy9Wt7iEZJLZBbEGI\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:49:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": \"0\",\n    \"roles\": []\n}"
+								},
+								{
+									"name": "Get roles",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-roles",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "320"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"140-7P8mTKh6tlIGJUsuATiiCWt5st0\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:48:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": \"2\",\n    \"roles\": [\n        {\n            \"id\": \"1\",\n            \"name\": \"user\",\n            \"color\": null,\n            \"image\": null,\n            \"type\": \"general\",\n            \"created_at\": \"2020-02-25T07:45:03.453Z\",\n            \"updated_at\": \"2020-02-25T07:45:03.453Z\"\n        },\n        {\n            \"id\": \"2\",\n            \"name\": \"admin\",\n            \"color\": null,\n            \"image\": null,\n            \"type\": \"general\",\n            \"created_at\": \"2020-02-25T07:45:03.453Z\",\n            \"updated_at\": \"2020-02-25T07:45:03.453Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Assigned roles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/user-roles/assigned",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-roles",
+										"assigned"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Assigned roles with filter",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-roles/assigned?role-type=faction",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"assigned"
+											],
+											"query": [
+												{
+													"key": "role-type",
+													"value": "faction"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "24"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"18-ZtkELtXxikHOSLtdp10RyQSHQWs\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:53:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"roles\": [],\n    \"total\": \"0\"\n}"
+								},
+								{
+									"name": "Get Assigned roles",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-roles/assigned",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"assigned"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "136"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"88-LkkoRYn9+sgh0iYlYNiMKGG1mSU\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:52:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"roles\": [\n        {\n            \"id\": \"1\",\n            \"name\": \"user\",\n            \"user_id\": \"1\",\n            \"type\": \"general\"\n        },\n        {\n            \"id\": \"2\",\n            \"name\": \"admin\",\n            \"user_id\": \"1\",\n            \"type\": \"general\"\n        }\n    ],\n    \"total\": \"2\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Create role",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Overlord",
+											"type": "text"
+										},
+										{
+											"key": "color",
+											"value": "red",
+											"description": "Optional",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "general",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/user-roles",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-roles"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create faction role",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "This is a faction role",
+													"type": "text"
+												},
+												{
+													"key": "color",
+													"value": "red",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "type",
+													"value": "faction",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-roles",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "190"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"be-tNKMvyTtHZda5Pkuev0u/wwAjgU\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:58:12 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"role\": {\n        \"id\": \"4\",\n        \"name\": \"This is a faction role\",\n        \"color\": \"red\",\n        \"image\": null,\n        \"type\": \"faction\",\n        \"created_at\": \"2020-02-28T18:58:12.253Z\",\n        \"updated_at\": \"2020-02-28T18:58:12.253Z\"\n    }\n}"
+								},
+								{
+									"name": "Create role with invalid role type",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "This is a rank role",
+													"type": "text"
+												},
+												{
+													"key": "color",
+													"value": "red",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "type",
+													"value": "fedora",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-roles",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "46"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2e-0RZV1DxZU/1uQCNpd3cgFy1ZxR4\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:59:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 400,\n    \"description\": \"Invalid role type\"\n}"
+								},
+								{
+									"name": "Create role with name already in use",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "This is a general role",
+													"type": "text"
+												},
+												{
+													"key": "color",
+													"value": "blue",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "type",
+													"value": "general",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-roles",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "48"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"30-EsBT6GPXVlv8PNvTZYkzsC8S7AM\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:57:41 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 400,\n    \"description\": \"Name already exists\"\n}"
+								},
+								{
+									"name": "Create rank",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "This is a rank role",
+													"type": "text"
+												},
+												{
+													"key": "color",
+													"value": "red",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "type",
+													"value": "rank",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-roles",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "184"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"b8-mp7kdvSYfwiLuqOQEZQB7Jpq6s8\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:58:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"role\": {\n        \"id\": \"5\",\n        \"name\": \"This is a rank role\",\n        \"color\": \"red\",\n        \"image\": null,\n        \"type\": \"rank\",\n        \"created_at\": \"2020-02-28T18:58:30.566Z\",\n        \"updated_at\": \"2020-02-28T18:58:30.566Z\"\n    }\n}"
+								},
+								{
+									"name": "Create role general",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "This is a general role",
+													"type": "text"
+												},
+												{
+													"key": "color",
+													"value": "blue",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "type",
+													"value": "general",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-roles",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "191"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"bf-LjU7GwG9W4r4sGYjM0kD9X7hbBw\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:57:26 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"role\": {\n        \"id\": \"3\",\n        \"name\": \"This is a general role\",\n        \"color\": \"blue\",\n        \"image\": null,\n        \"type\": \"general\",\n        \"created_at\": \"2020-02-28T18:57:26.065Z\",\n        \"updated_at\": \"2020-02-28T18:57:26.065Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Assign role",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "roleId",
+											"value": "6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/user-roles/assigned",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-roles",
+										"assigned"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Assign role success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "userId",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "roleId",
+													"value": "6",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-roles/assigned",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"assigned"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "16"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:02:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true\n}"
+								},
+								{
+									"name": "Assign role (already assigned)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "userId",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "roleId",
+													"value": "6",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-roles/assigned",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"assigned"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-H8pRuhDz7Yu9/ix6beuY4REYmuY\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:02:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 400,\n    \"description\": \"Role is already assigned\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Edit role",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Momonga-sama",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "color",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/user-roles/6",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-roles",
+										"6"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Edit role info",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											},
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "Momonga-sama",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "color",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "type",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-roles/6",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"6"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "16"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:05:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Get role types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/user-roles/types",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-roles",
+										"types"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get role types",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-roles/types",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"types"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "81"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"51-EQE3SQDA3By9GXY2OajLiz9MsMI\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 18:51:03 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": \"3\",\n    \"roleTypes\": [\n        {\n            \"name\": \"general\"\n        },\n        {\n            \"name\": \"faction\"\n        },\n        {\n            \"name\": \"rank\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get specific role",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/user-roles/6",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-roles",
+										"6"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get specific role with id 6",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-roles/6",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"6"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "165"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"a5-ttZL4taM+GFBya+vCP07sl684Mw\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:07:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"role\": {\n        \"id\": \"6\",\n        \"name\": \"Momonga-sama\",\n        \"color\": \"red\",\n        \"image\": null,\n        \"type\": \"general\",\n        \"created_at\": \"2020-02-28T18:59:26.679Z\",\n        \"updated_at\": \"2020-02-28T19:05:49.387Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete role assignation",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "roleId",
+											"value": "6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/user-roles/assigned",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-roles",
+										"assigned"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete role assignation",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "userId",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "roleId",
+													"value": "6",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-roles/assigned",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"assigned"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "16"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:13:29 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true\n}"
+								},
+								{
+									"name": "Delete role assignation (failed, role is not assigned)",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "userId",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "roleId",
+													"value": "6",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-roles/assigned",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"assigned"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "49"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"31-mlrxfDjNNv3gGwPxPF7ux9S6/eI\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:13:39 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 400,\n    \"description\": \"Role is not assigned\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete role",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/user-roles/1",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-roles",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete role (Error, trying to delete a base role)",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{server_path}}/user-roles/1",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"1"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "87"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"57-dBhWibJE3R4Pc5DnaRu2gZ9b/20\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:19:02 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 403,\n    \"description\": \"Stop right there criminal scum. You can't delete that role\"\n}"
+								},
+								{
+									"name": "Delete role (invalid id)",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{server_path}}/user-roles/4",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"4"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "39"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"27-44k77X5+rzcUVB62pqOpK1aAq2U\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:18:48 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 400,\n    \"description\": \"Invalid id\"\n}"
+								},
+								{
+									"name": "Delete role (success)",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{server_path}}/user-roles/4",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-roles",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "16"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:18:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Extra fields",
+					"item": [
+						{
+							"name": "Get extra fields",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/user-fields",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-fields"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get extra fields (empty)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-fields",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "25"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"19-6tEjKsSI6T72IiTCBt4GKyWBtqU\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:28:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": \"0\",\n    \"fields\": []\n}"
+								},
+								{
+									"name": "Get extra fields",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{server_path}}/user-fields",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "264"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"108-NqX5yvEzQACDG+s/0SCOhbypKuM\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:32:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": \"1\",\n    \"fields\": [\n        {\n            \"id\": \"2\",\n            \"name\": \"First field name\",\n            \"description\": \"A brief description\",\n            \"default_value\": null,\n            \"user_can_edit\": true,\n            \"show_on_profile\": false,\n            \"show_on_post\": false,\n            \"created_at\": \"2020-02-28T19:32:05.811Z\",\n            \"updated_at\": \"2020-02-28T19:32:05.811Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Create extra field",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "First field name",
+											"description": "Name of the field",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "A brief description",
+											"description": "Optional",
+											"type": "text"
+										},
+										{
+											"key": "defaultValue",
+											"value": "",
+											"description": "Optional",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/user-fields",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-fields"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create extra field",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "First field name",
+													"description": "Name of the field",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "A brief description",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "defaultValue",
+													"value": "",
+													"description": "Optional",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-fields",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "249"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"f9-Zwdep8OeO+0zLC/l8zu+0ViPCeU\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:32:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"field\": {\n        \"id\": \"2\",\n        \"name\": \"First field name\",\n        \"description\": \"A brief description\",\n        \"default_value\": null,\n        \"user_can_edit\": true,\n        \"show_on_profile\": false,\n        \"show_on_post\": false,\n        \"created_at\": \"2020-02-28T19:32:05.811Z\",\n        \"updated_at\": \"2020-02-28T19:32:05.811Z\"\n    }\n}"
+								},
+								{
+									"name": "Create extra field name already exists",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "First field name",
+													"description": "Name of the field",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "A brief description",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "defaultValue",
+													"value": "",
+													"description": "Optional",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-fields",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "48"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"30-EsBT6GPXVlv8PNvTZYkzsC8S7AM\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:32:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 400,\n    \"description\": \"Name already exists\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get extra fields values",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/user-fields/values",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-fields",
+										"values"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get extra fields values",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-fields/values",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields",
+												"values"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "630"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"276-bgdhgF8dEUVe3oT3GF9uP6Q4SAE\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:47:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": \"2\",\n    \"fields\": [\n        {\n            \"user_id\": \"1\",\n            \"username\": \"Test username\",\n            \"name\": \"First field name\",\n            \"description\": \"A brief description\",\n            \"user_can_edit\": true,\n            \"show_on_profile\": false,\n            \"show_on_post\": false,\n            \"created_at\": \"2020-02-28T19:32:05.811Z\",\n            \"updated_at\": \"2020-02-28T19:32:05.811Z\",\n            \"value\": null\n        },\n        {\n            \"user_id\": \"2\",\n            \"username\": \"Test username 2\",\n            \"name\": \"First field name\",\n            \"description\": \"A brief description\",\n            \"user_can_edit\": true,\n            \"show_on_profile\": false,\n            \"show_on_post\": false,\n            \"created_at\": \"2020-02-28T19:32:05.811Z\",\n            \"updated_at\": \"2020-02-28T19:32:05.811Z\",\n            \"value\": \"Oh? You're approaching me? Instead of running away, you're coming right to me?\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get extra fields values (filter by field id)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-fields/values?field=1",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields",
+												"values"
+											],
+											"query": [
+												{
+													"key": "field",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "25"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"19-6tEjKsSI6T72IiTCBt4GKyWBtqU\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:38:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": \"0\",\n    \"fields\": []\n}"
+								},
+								{
+									"name": "Get extra fields values (both filled)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-fields/values",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields",
+												"values"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "684"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2ac-HwWHnuV39Ny7zM8/26PVapj5e/E\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:49:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": \"2\",\n    \"fields\": [\n        {\n            \"user_id\": \"1\",\n            \"username\": \"Test username\",\n            \"name\": \"First field name\",\n            \"description\": \"A brief description\",\n            \"user_can_edit\": true,\n            \"show_on_profile\": false,\n            \"show_on_post\": false,\n            \"created_at\": \"2020-02-28T19:32:05.811Z\",\n            \"updated_at\": \"2020-02-28T19:32:05.811Z\",\n            \"value\": \"I can't beat the shit out of you without getting closer.\"\n        },\n        {\n            \"user_id\": \"2\",\n            \"username\": \"Test username 2\",\n            \"name\": \"First field name\",\n            \"description\": \"A brief description\",\n            \"user_can_edit\": true,\n            \"show_on_profile\": false,\n            \"show_on_post\": false,\n            \"created_at\": \"2020-02-28T19:32:05.811Z\",\n            \"updated_at\": \"2020-02-28T19:32:05.811Z\",\n            \"value\": \"Oh? You're approaching me? Instead of running away, you're coming right to me?\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get extra fields values (filter by user id)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-fields/values?user=1",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields",
+												"values"
+											],
+											"query": [
+												{
+													"key": "user",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "288"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"120-FFj/W1sboJe6ON5t1/9yGdSRSMk\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:48:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": \"1\",\n    \"fields\": [\n        {\n            \"user_id\": \"1\",\n            \"username\": \"Test username\",\n            \"name\": \"First field name\",\n            \"description\": \"A brief description\",\n            \"user_can_edit\": true,\n            \"show_on_profile\": false,\n            \"show_on_post\": false,\n            \"created_at\": \"2020-02-28T19:32:05.811Z\",\n            \"updated_at\": \"2020-02-28T19:32:05.811Z\",\n            \"value\": null\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get specific field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/user-fields/2",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-fields",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get specific field",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{server_path}}/user-fields/2",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "249"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"f9-Zwdep8OeO+0zLC/l8zu+0ViPCeU\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:41:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"field\": {\n        \"id\": \"2\",\n        \"name\": \"First field name\",\n        \"description\": \"A brief description\",\n        \"default_value\": null,\n        \"user_can_edit\": true,\n        \"show_on_profile\": false,\n        \"show_on_post\": false,\n        \"created_at\": \"2020-02-28T19:32:05.811Z\",\n        \"updated_at\": \"2020-02-28T19:32:05.811Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Assign value to extra field",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "userId",
+											"value": "2",
+											"description": "If you don't send this value, it'll update the value for the owner of the token sent",
+											"type": "text"
+										},
+										{
+											"key": "fieldId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "value",
+											"value": "I can't beat the shit out of you without getting closer.",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/user-fields/values",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-fields",
+										"values"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Assign value to extra field",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "userId",
+													"value": "2",
+													"description": "If you don't send this value, it'll update the value for the owner of the token sent",
+													"type": "text"
+												},
+												{
+													"key": "fieldId",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "value",
+													"value": "Oh? You're approaching me? Instead of running away, you're coming right to me?",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-fields/values",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields",
+												"values"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "16"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:45:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true\n}"
+								},
+								{
+									"name": "Assign value to extra field (update for self)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/x-www-form-urlencoded",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "userId",
+													"value": "2",
+													"description": "If you don't send this value, it'll update the value for the owner of the token sent",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "fieldId",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "value",
+													"value": "I can't beat the shit out of you without getting closer.",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{server_path}}/user-fields/values",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields",
+												"values"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "16"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:48:50 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete extra field",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/user-fields/5",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user-fields",
+										"5"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete extra field (invalid id)",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "x-token",
+												"value": "{{user_token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{server_path}}/user-fields/5",
+											"host": [
+												"{{server_path}}"
+											],
+											"path": [
+												"user-fields",
+												"5"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "39"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"27-44k77X5+rzcUVB62pqOpK1aAq2U\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 19:51:58 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 400,\n    \"description\": \"Invalid id\"\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Test username 2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test_email2@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server_path}}/user/register",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"user",
+								"register"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Tries to register an user an user"
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "Test username",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "test_email@test.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/user/register",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user",
+										"register"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMSJ9LCJpYXQiOjE1ODI4MTE5NjUsImV4cCI6MTU4Mjg5ODM2NX0.Ftmuhzh4Gg7uuqZh_FhSJqDvfIGm0W8vwaxyji2QACQ\",\n    \"expiresAt\": \"2020-03-28T14:23:46.575Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "test_email@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server_path}}/user/login",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "Tries to login an user"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "test_email@test.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/user/login",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-bANRvRzt3M/DNBoShjmi9g1GpcM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Feb 2020 14:23:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMSJ9LCJpYXQiOjE1ODI4MTM0MjYsImV4cCI6MTU4Mjg5OTgyNn0.2a03nNrPMyV-MO5PIgQkHahe3KvD3Mc_W1dJ5y_iDJ4\",\n    \"expiresAt\": \"2020-03-28T14:23:46.575Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_path}}/user",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/user",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "358"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"166-F9sTODAKlZuTgv6osOmRl8HkEnQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:01:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": \"2\",\n    \"users\": [\n        {\n            \"id\": \"1\",\n            \"username\": \"Test username\",\n            \"email\": \"test_email@test.com\",\n            \"avatar_url\": null,\n            \"created_at\": \"2020-02-27T13:59:25.196Z\",\n            \"updated_at\": \"2020-02-27T13:59:25.196Z\"\n        },\n        {\n            \"id\": \"2\",\n            \"username\": \"Test username 2\",\n            \"email\": \"test_email2@test.com\",\n            \"avatar_url\": null,\n            \"created_at\": \"2020-02-28T19:34:10.651Z\",\n            \"updated_at\": \"2020-02-28T19:34:10.651Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get specific user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_path}}/user/2",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get specific user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/user/2",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "177"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b1-ZP/ikYYY2O7O5HBNrvdOgJLekMU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:03:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": \"2\",\n        \"username\": \"Test username 2\",\n        \"email\": \"test_email2@test.com\",\n        \"avatar_url\": null,\n        \"created_at\": \"2020-02-28T19:34:10.651Z\",\n        \"updated_at\": \"2020-02-28T19:34:10.651Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get current user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_path}}/user/me",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get current user (invalid token or missing)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/user/me",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d-O3i+ap2cff5bxhPRN8PyzcjObvA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:04:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": null\n}"
+						},
+						{
+							"name": "Get current user (with token)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/user/me",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"user",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "174"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ae-LQxpylGBrktPGCvPNUorFY1BeMs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:04:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": \"1\",\n        \"username\": \"Test username\",\n        \"email\": \"test_email@test.com\",\n        \"avatar_url\": null,\n        \"created_at\": \"2020-02-27T13:59:25.196Z\",\n        \"updated_at\": \"2020-02-27T13:59:25.196Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Forum",
+			"item": [
+				{
+					"name": "Create forum",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Test forum child",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Just a description",
+									"description": "This is optional",
+									"type": "text"
+								},
+								{
+									"key": "parent",
+									"value": "5",
+									"description": "Parent forum",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server_path}}/forum",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"forum"
+							]
+						},
+						"description": "Just create a forum"
+					},
+					"response": [
+						{
+							"name": "Forum child",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Test forum child",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Just a description",
+											"description": "This is optional",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "5",
+											"description": "Parent forum",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/forum",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "224"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e0-yaTyZONBaUvN+MJ+qaA6GjY7LXM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Feb 2020 15:40:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"forum\": [\n        {\n            \"id\": \"6\",\n            \"parent_forum\": \"5\",\n            \"name\": \"Test forum child\",\n            \"slug\": \"f6-test-forum-child\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:40:14.563Z\",\n            \"updated_at\": \"2020-02-27T15:40:14.563Z\",\n            \"image\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "Invalid parent forum id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Test forum",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Just a description",
+											"description": "This is optional",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "25",
+											"description": "Parent forum",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/forum",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-m9uiv14BODvgLfDo2p42BrPHKvM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Feb 2020 15:39:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"description\": \"Invalid parent id\"\n}"
+						},
+						{
+							"name": "Forum creation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Test forum",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Just a description",
+											"description": "This is optional",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "2",
+											"description": "Parent forum",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/forum",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "213"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d5-97MTFVlU0R7YQMzqaQGQef5xPig\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Feb 2020 15:39:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"forum\": [\n        {\n            \"id\": \"5\",\n            \"parent_forum\": null,\n            \"name\": \"Test forum\",\n            \"slug\": \"f5-test-forum\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:39:30.135Z\",\n            \"updated_at\": \"2020-02-27T15:39:30.135Z\",\n            \"image\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Last post of forum",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_path}}/forum/last-post/1",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"forum",
+								"last-post",
+								"1"
+							]
+						},
+						"description": "Get the last post of a forum"
+					},
+					"response": [
+						{
+							"name": "Last post of forum",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/forum/last-post/1",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum",
+										"last-post",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "507"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1fb-ImjzZu9b/tduq+apV4ewuTan1uA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Feb 2020 15:51:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"thread\": {\n        \"thread\": {\n            \"id\": \"6\",\n            \"parent_forum\": \"1\",\n            \"name\": \"Steel is my body\",\n            \"slug\": \"t6-steel-is-my-body\",\n            \"description\": \"Test description\",\n            \"is_closed\": false,\n            \"created_by\": \"1\",\n            \"created_at\": \"2020-02-27T15:51:02.507Z\",\n            \"updated_at\": \"2020-02-27T15:51:02.507Z\",\n            \"is_pinned\": false,\n            \"global_pin\": false\n        },\n        \"totalPosts\": \"1\"\n    },\n    \"post\": {\n        \"id\": \"4\",\n        \"parent_thread\": \"6\",\n        \"name\": null,\n        \"description\": null,\n        \"content\": \"And fire is my blood\",\n        \"created_by\": \"1\",\n        \"created_at\": \"2020-02-27T15:51:02.555Z\",\n        \"updated_at\": \"2020-02-27T15:51:02.555Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get forums",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_path}}/forum",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"forum"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Base forums",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/forum?type=parent",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "parent"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "430"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ae-dYvk1JqjUqC2jkeNzgtHQfALidE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:07:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": \"2\",\n    \"forums\": [\n        {\n            \"id\": \"1\",\n            \"parent_forum\": null,\n            \"name\": \"First forum\",\n            \"slug\": \"f1-first-forum\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:31:56.910Z\",\n            \"updated_at\": \"2020-02-27T15:31:56.910Z\",\n            \"image\": null\n        },\n        {\n            \"id\": \"5\",\n            \"parent_forum\": null,\n            \"name\": \"Test forum\",\n            \"slug\": \"f5-test-forum\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:39:30.135Z\",\n            \"updated_at\": \"2020-02-27T15:39:30.135Z\",\n            \"image\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get forums",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/forum",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1256"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4e8-FGLMRETZzP7Oom8eTWA4PMy2lPc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:06:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": \"6\",\n    \"forums\": [\n        {\n            \"id\": \"1\",\n            \"parent_forum\": null,\n            \"name\": \"First forum\",\n            \"slug\": \"f1-first-forum\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:31:56.910Z\",\n            \"updated_at\": \"2020-02-27T15:31:56.910Z\",\n            \"image\": null\n        },\n        {\n            \"id\": \"2\",\n            \"parent_forum\": \"1\",\n            \"name\": \"Second forum\",\n            \"slug\": \"f2-second-forum\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:32:26.077Z\",\n            \"updated_at\": \"2020-02-27T15:32:26.077Z\",\n            \"image\": null\n        },\n        {\n            \"id\": \"3\",\n            \"parent_forum\": \"1\",\n            \"name\": \"Third forum\",\n            \"slug\": \"f3-third-forum\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:32:34.259Z\",\n            \"updated_at\": \"2020-02-27T15:32:34.259Z\",\n            \"image\": null\n        },\n        {\n            \"id\": \"4\",\n            \"parent_forum\": \"2\",\n            \"name\": \"Fourth forum\",\n            \"slug\": \"f4-fourth-forum\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:32:42.001Z\",\n            \"updated_at\": \"2020-02-27T15:32:42.001Z\",\n            \"image\": null\n        },\n        {\n            \"id\": \"5\",\n            \"parent_forum\": null,\n            \"name\": \"Test forum\",\n            \"slug\": \"f5-test-forum\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:39:30.135Z\",\n            \"updated_at\": \"2020-02-27T15:39:30.135Z\",\n            \"image\": null\n        },\n        {\n            \"id\": \"6\",\n            \"parent_forum\": \"5\",\n            \"name\": \"Test forum child\",\n            \"slug\": \"f6-test-forum-child\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:40:14.563Z\",\n            \"updated_at\": \"2020-02-27T15:40:14.563Z\",\n            \"image\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get forums with an specific parent",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/forum?type=child&parent-id=1",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "child"
+										},
+										{
+											"key": "parent-id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "432"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b0-jTZQ38JFjg4t5W03TeuHx1psmes\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:08:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": \"2\",\n    \"forums\": [\n        {\n            \"id\": \"2\",\n            \"parent_forum\": \"1\",\n            \"name\": \"Second forum\",\n            \"slug\": \"f2-second-forum\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:32:26.077Z\",\n            \"updated_at\": \"2020-02-27T15:32:26.077Z\",\n            \"image\": null\n        },\n        {\n            \"id\": \"3\",\n            \"parent_forum\": \"1\",\n            \"name\": \"Third forum\",\n            \"slug\": \"f3-third-forum\",\n            \"description\": \"Just a description\",\n            \"created_at\": \"2020-02-27T15:32:34.259Z\",\n            \"updated_at\": \"2020-02-27T15:32:34.259Z\",\n            \"image\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get specific forum",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_path}}/forum/10",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"forum",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get specific forum",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/forum/1",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "213"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d5-Ve4mFO7WJosoelt21bjqECRz9jE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:09:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"forum\": {\n        \"id\": \"1\",\n        \"parent_forum\": null,\n        \"name\": \"First forum\",\n        \"slug\": \"f1-first-forum\",\n        \"description\": \"Just a description\",\n        \"created_at\": \"2020-02-27T15:31:56.910Z\",\n        \"updated_at\": \"2020-02-27T15:31:56.910Z\",\n        \"image\": null\n    }\n}"
+						},
+						{
+							"name": "Get specific forum (invalid forum id)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/forum/10",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e-6r36s8CtQpFt7cMCn4aL3FATxpU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:11:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"forum\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update forum",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "AYAYA",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Im another description",
+									"type": "text"
+								},
+								{
+									"key": "parent",
+									"value": "null",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server_path}}/forum/1",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"forum",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update forum name and description",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "AYAYA",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Im another description",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/forum/1",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dc-TEn3zbHWUF5egFAP3JW7lRNKm7g\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:14:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"forum\": {\n        \"id\": \"1\",\n        \"parent_forum\": null,\n        \"name\": \"AYAYA\",\n        \"slug\": \"f1-ayaya\",\n        \"description\": \"Im another description\",\n        \"created_at\": \"2020-02-27T15:31:56.910Z\",\n        \"updated_at\": \"2020-02-28T20:14:23.922Z\",\n        \"image\": null\n    }\n}"
+						},
+						{
+							"name": "Update forum parent",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "AYAYA",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Im another description",
+											"type": "text"
+										},
+										{
+											"key": "parent",
+											"value": "5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/forum/1",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "219"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"db-fUdVwjpq4z0qJzgc0jTPx0/wx2E\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:15:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"forum\": {\n        \"id\": \"1\",\n        \"parent_forum\": \"5\",\n        \"name\": \"AYAYA\",\n        \"slug\": \"f1-ayaya\",\n        \"description\": \"Im another description\",\n        \"created_at\": \"2020-02-27T15:31:56.910Z\",\n        \"updated_at\": \"2020-02-28T20:15:27.152Z\",\n        \"image\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete forum",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_path}}/forum/3",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"forum",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete forum (invalid id)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/forum/3",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum",
+										"3"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-44k77X5+rzcUVB62pqOpK1aAq2U\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:20:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"description\": \"Invalid id\"\n}"
+						},
+						{
+							"name": "Delete forum",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/forum/3",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"forum",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:19:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Thread",
+			"item": [
+				{
+					"name": "Create thread",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "parentForum",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "I've created",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Test description",
+									"description": "This is optional",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Over thousand blades",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server_path}}/thread",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"thread"
+							]
+						},
+						"description": "Creates a new thread inside a forum"
+					},
+					"response": [
+						{
+							"name": "Create thread",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "parentForum",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "first thread",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Test description",
+											"description": "This is optional",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "I am the bone of my sword",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/thread",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"thread"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "476"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1dc-T8+sykHcsRlplym1T4Vuf1pphxM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Feb 2020 15:49:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"thread\": {\n        \"id\": \"5\",\n        \"parent_forum\": \"4\",\n        \"name\": \"first thread\",\n        \"slug\": \"t5-first-thread\",\n        \"description\": \"Test description\",\n        \"is_closed\": false,\n        \"created_by\": \"1\",\n        \"created_at\": \"2020-02-27T15:49:59.652Z\",\n        \"updated_at\": \"2020-02-27T15:49:59.652Z\",\n        \"is_pinned\": false,\n        \"global_pin\": false\n    },\n    \"post\": {\n        \"id\": \"3\",\n        \"parent_thread\": \"5\",\n        \"name\": null,\n        \"description\": null,\n        \"content\": \"I am the bone of my sword\",\n        \"created_by\": \"1\",\n        \"created_at\": \"2020-02-27T15:49:59.692Z\",\n        \"updated_at\": \"2020-02-27T15:49:59.692Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get threads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_path}}/thread",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"thread"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get threads",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/thread",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"thread"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "951"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b7-PUqfYwouFCeJVYtRoZwPyfyAD4s\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:28:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": \"3\",\n    \"threads\": [\n        {\n            \"id\": \"5\",\n            \"parent_forum\": \"4\",\n            \"name\": \"first thread\",\n            \"slug\": \"t5-first-thread\",\n            \"description\": \"Test description\",\n            \"is_closed\": false,\n            \"created_by\": \"1\",\n            \"created_at\": \"2020-02-27T15:49:59.652Z\",\n            \"updated_at\": \"2020-02-27T15:49:59.652Z\",\n            \"is_pinned\": false,\n            \"global_pin\": false,\n            \"last_post_date\": \"2020-02-27T16:00:15.029Z\"\n        },\n        {\n            \"id\": \"6\",\n            \"parent_forum\": \"1\",\n            \"name\": \"Steel is my body\",\n            \"slug\": \"t6-steel-is-my-body\",\n            \"description\": \"Test description\",\n            \"is_closed\": false,\n            \"created_by\": \"1\",\n            \"created_at\": \"2020-02-27T15:51:02.507Z\",\n            \"updated_at\": \"2020-02-27T15:51:02.507Z\",\n            \"is_pinned\": false,\n            \"global_pin\": false,\n            \"last_post_date\": \"2020-02-27T16:06:00.626Z\"\n        },\n        {\n            \"id\": \"7\",\n            \"parent_forum\": \"6\",\n            \"name\": \"I've created\",\n            \"slug\": \"t7-i-ve-created\",\n            \"description\": \"Test description\",\n            \"is_closed\": false,\n            \"created_by\": \"1\",\n            \"created_at\": \"2020-02-27T15:51:46.346Z\",\n            \"updated_at\": \"2020-02-27T15:51:46.346Z\",\n            \"is_pinned\": false,\n            \"global_pin\": false,\n            \"last_post_date\": \"2020-02-27T15:51:46.397Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get last post of thread",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_path}}/thread/last-post/7",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"thread",
+								"last-post",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get last post of thread",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/thread/last-post/7",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"thread",
+										"last-post",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "217"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d9-ljZEtNPO/RK9D81/Hqj9LbojkGE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:30:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"totalPosts\": \"1\",\n    \"post\": {\n        \"id\": \"5\",\n        \"parent_thread\": \"7\",\n        \"name\": null,\n        \"description\": null,\n        \"content\": \"Over thousand blades\",\n        \"created_by\": \"1\",\n        \"created_at\": \"2020-02-27T15:51:46.397Z\",\n        \"updated_at\": \"2020-02-27T15:51:46.397Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Change thread status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_path}}/thread/status/5",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"thread",
+								"status",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change thread status",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/thread/status/5",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"thread",
+										"status",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:32:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete thread",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server_path}}/thread/7",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"thread",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete thread",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/thread/7",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"thread",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "16"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:33:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true\n}"
+						},
+						{
+							"name": "Delete thread (invalid id)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server_path}}/thread/7",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"thread",
+										"7"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-44k77X5+rzcUVB62pqOpK1aAq2U\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:33:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"description\": \"Invalid id\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "content",
+									"value": "No recuerdo el resto xdxdxdxdxd",
+									"type": "text"
+								},
+								{
+									"key": "threadId",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server_path}}/post",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-token",
+										"value": "{{user_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "content",
+											"value": "Hello there",
+											"type": "text"
+										},
+										{
+											"key": "threadId",
+											"value": "5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{server_path}}/post",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"post"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "193"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c1-F6eRpftP2G/VS442yieRd62vidk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Feb 2020 16:00:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"post\": [\n        {\n            \"id\": \"6\",\n            \"parent_thread\": \"5\",\n            \"name\": null,\n            \"description\": null,\n            \"content\": \"Hello there\",\n            \"created_by\": \"1\",\n            \"created_at\": \"2020-02-27T16:00:15.029Z\",\n            \"updated_at\": \"2020-02-27T16:00:15.029Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_path}}/post?thread-id=6",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "thread-id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get posts of thread",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/post?thread-id=6",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"post"
+									],
+									"query": [
+										{
+											"key": "thread-id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "418"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a2-oZHtwR8vJi0pH2Qd5o/t2zVJBeo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:40:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": \"2\",\n    \"posts\": [\n        {\n            \"id\": \"7\",\n            \"parent_thread\": \"6\",\n            \"name\": null,\n            \"description\": null,\n            \"content\": \"No recuerdo el resto xdxdxdxdxd\",\n            \"created_by\": \"1\",\n            \"created_at\": \"2020-02-27T16:06:00.626Z\",\n            \"updated_at\": \"2020-02-27T16:06:00.626Z\"\n        },\n        {\n            \"id\": \"4\",\n            \"parent_thread\": \"6\",\n            \"name\": null,\n            \"description\": null,\n            \"content\": \"And fire is my blood\",\n            \"created_by\": \"1\",\n            \"created_at\": \"2020-02-27T15:51:02.555Z\",\n            \"updated_at\": \"2020-02-27T15:51:02.555Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get specific post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_path}}/post/6",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"post",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get specific post (invalid post id)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/post/",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"post",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d-BNGRNfqjqThBSBMl1WMGiiZILPw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:40:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"post\": null\n}"
+						},
+						{
+							"name": "Get specific post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_path}}/post/6",
+									"host": [
+										"{{server_path}}"
+									],
+									"path": [
+										"post",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "191"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bf-XobYOy5bIIOFpqPgauh1h60kh+E\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2020 20:41:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"post\": {\n        \"id\": \"6\",\n        \"parent_thread\": \"5\",\n        \"name\": null,\n        \"description\": null,\n        \"content\": \"Hello there\",\n        \"created_by\": \"1\",\n        \"created_at\": \"2020-02-27T16:00:15.029Z\",\n        \"updated_at\": \"2020-02-27T16:00:15.029Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "content",
+									"value": "Marico el que lo lea x2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server_path}}/post/7",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"post",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "x-token",
+								"value": "{{user_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server_path}}/post/3",
+							"host": [
+								"{{server_path}}"
+							],
+							"path": [
+								"post",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ff78ed53-8fc5-4981-a41d-00dfea3853f2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "032ef6fc-55e2-4a92-8ecc-974ecdb08326",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
