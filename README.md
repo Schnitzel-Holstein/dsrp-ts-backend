@@ -22,3 +22,7 @@ npm run run-migrations
 ```
 Or inside `migrations` folder, run `node run_migrations.js`
 You need to have the config files generated inside `/dist`.
+
+## TODO
+- Better doc (currently, you only have an exported Postman collection on `/docs/postman`)
+- Forum/thread/post permission (read permission)
