@@ -37,7 +37,7 @@ forumRouter.get('/', (req: IUserRequest, res: Response, next: NextFunction) => {
         }
 
         if(categoryId && !isNaN(categoryId)) {
-            if(params.length === 0 || type && type === 'parent') {
+            if(params.length === 0 || type !== 'parent') {
                 query += ' WHERE';
                 queryCount += ' WHERE';
             }
