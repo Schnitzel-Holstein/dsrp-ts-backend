@@ -37,7 +37,7 @@ forumRouter.get('/', (req: IUserRequest, res: Response, next: NextFunction) => {
         }
 
         if(categoryId && !isNaN(categoryId)) {
-            if(params.length === 0) {
+            if(params.length === 0 || type && type === 'parent') {
                 query += ' WHERE';
                 queryCount += ' WHERE';
             }
@@ -58,7 +58,7 @@ forumRouter.get('/', (req: IUserRequest, res: Response, next: NextFunction) => {
         query += ` OFFSET $${params.length}`;
 
         const results = await t.query(query,params);
-        
+
         return res.status(200).json({
             total: totalResults,
             forums: results
@@ -288,7 +288,7 @@ forumRouter.put('/:id', roleRequired('admin'), (req: IUserRequest, res: Response
             query += ` category=$${params.length}`;
         }
 
-        // Params will always be greater than 1, so just add the ',' 
+        // Params will always be greater than 1, so just add the ','
         params.push(id);
         query += `, updated_at=now() WHERE id=$${params.length} RETURNING *`;
 
@@ -331,7 +331,7 @@ forumRouter.delete('/:id', roleRequired('admin'), (req: IUserRequest, res: Respo
                 console.log(err);
                 return next(new HttpException(500, 'Internal server error while deleting forum'));
             });
-        
+
     });
 });
 
