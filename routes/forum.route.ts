@@ -16,6 +16,7 @@ const forumRouter = Router();
 forumRouter.get('/', (req: IUserRequest, res: Response, next: NextFunction) => {
     const { page, limit } = buildPagination(req);
     const { type } = req.query;
+    const categoryId = req.query['category-id'];
     const parentId = req.query['parent-id'];
 
     db.task(async t => {
@@ -33,6 +34,20 @@ forumRouter.get('/', (req: IUserRequest, res: Response, next: NextFunction) => {
                 queryCount += ' WHERE parent_forum=$1';
                 params.push(parentId);
             }
+        }
+
+        if(categoryId && !isNaN(categoryId)) {
+            if(params.length === 0) {
+                query += ' WHERE';
+                queryCount += ' WHERE';
+            }
+            else {
+                query += ' AND';
+                queryCount += ' AND';
+            }
+            params.push(categoryId);
+            query += ` category=$${params.length}`;
+            queryCount += ` category=$${params.length}`;
         }
 
         const totalResults = (await t.query(queryCount, params))[0].count;
@@ -148,13 +163,21 @@ forumRouter.get('/:id', (req: IUserRequest, res: Response, next: NextFunction) =
  * @param parent <integer>
  */
 forumRouter.post('/', roleRequired('admin'), (req: IUserRequest, res: Response, next: NextFunction) => {
-    const { name, description, image, parent } = req.body;
+    const { name, description, image, parent, category } = req.body;
     if (!name) {
         return next(new HttpException(400, 'Name is required'));
     }
 
     if (parent && isNaN(parent as any)) {
         return next(new HttpException(400, 'Parent id must be integer'));
+    }
+
+    if (category && isNaN(category as any)) {
+        return next(new HttpException(400, 'Category must be integer'));
+    }
+
+    if(!category && !parent) {
+        return next(new HttpException(400, 'You must send either parent or category'));
     }
 
     db.task(async t => {
@@ -165,10 +188,16 @@ forumRouter.post('/', roleRequired('admin'), (req: IUserRequest, res: Response, 
                 return next(new HttpException(400, 'Invalid parent id'));
             }
         }
+        if(category) {
+            const categoryExists = (await t.query('SELECT id FROM categories WHERE id=$1', [category]).catch((err:any)=>{return []})).length > 0
+            if(!categoryExists) {
+                return next(new HttpException(400, 'Invalid category id'));
+            }
+        }
         // Try to insert it
         const insertedForum = await t.query(
-            'INSERT INTO forums(name, description, image, parent_forum) VALUES($1,$2,$3,$4) RETURNING *',
-            [name, description, image, parent]
+            'INSERT INTO forums(name, description, image, parent_forum, category) VALUES($1,$2,$3,$4,$5) RETURNING *',
+            [name, description, image, parent, category]
         ).catch((err: any) => {
             // MISSION FAILED
             return [];
@@ -179,7 +208,7 @@ forumRouter.post('/', roleRequired('admin'), (req: IUserRequest, res: Response, 
         }
 
         return res.status(200).json({
-            forum: insertedForum
+            forum: insertedForum[0]
         });
     });
 });
@@ -188,7 +217,7 @@ forumRouter.post('/', roleRequired('admin'), (req: IUserRequest, res: Response, 
  * Update info of a forum
  */
 forumRouter.put('/:id', roleRequired('admin'), (req: IUserRequest, res: Response, next: NextFunction) => {
-    const { name, description, image, parent } = req.body;
+    const { name, description, image, parent, category } = req.body;
     const { id } = req.params;
     if(!name && !description && !image && (parent === undefined)) {
         return next(new HttpException(400, 'You must edit something'));
@@ -240,6 +269,23 @@ forumRouter.put('/:id', roleRequired('admin'), (req: IUserRequest, res: Response
             }
             params.push(parent===null || parent==='null'? null : parent);
             query += ` parent_forum=$${params.length}`;
+        }
+
+        if ( category !== undefined ) {
+            if (isNaN(category as any)) {
+                return next(new HttpException(400, 'Category id must be integer'));
+            }
+
+            const categoryExistence = (await t.query('SELECT id FROM categories WHERE id=$1',[category]).catch((err:any)=>{return []})).length > 0;
+            if (!categoryExistence) {
+                return next(new HttpException(400, 'Invalid category id'));
+            }
+
+            if ( params.length > 0) {
+                query += ',';
+            }
+            params.push(category);
+            query += ` category=$${params.length}`;
         }
 
         // Params will always be greater than 1, so just add the ',' 

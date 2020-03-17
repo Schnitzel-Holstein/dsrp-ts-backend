@@ -21,6 +21,7 @@ import postRouter from './routes/post.route';
 import userRolesRouter from './routes/user_roles.route';
 import userExtraFieldRouter from './routes/user_extra_field.route';
 import forumRouter from './routes/forum.route';
+import categoryRouter from './routes/category.route';
 
 
 const server = new Server(config.http.port);
@@ -42,6 +43,7 @@ server.app.use(userBannedMiddleware);
 server.app.use('/user', userRoutes);
 server.app.use('/user-roles', userRolesRouter);
 server.app.use('/user-fields', userExtraFieldRouter);
+server.app.use('/categories', categoryRouter);
 server.app.use('/forum', forumRouter);
 server.app.use('/thread', threadRouter);
 server.app.use('/post', postRouter);
