@@ -34,7 +34,7 @@ server.app.use(bodyParser.json());
 server.app.use(Morgan('dev'))
 
 // Configure CORS
-server.app.use(cors());
+server.app.use(cors({origin: true, credentials:true}));
 
 // If the user is banned, always return 403
 server.app.use(userBannedMiddleware);
