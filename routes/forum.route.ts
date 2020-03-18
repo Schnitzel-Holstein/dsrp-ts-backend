@@ -71,6 +71,10 @@ forumRouter.get('/', (req: IUserRequest, res: Response, next: NextFunction) => {
 });
 
 
+/**
+ * Get the last post of a specified forum
+ * @param id <number> Id of the forum
+ */
 forumRouter.get('/last-post/:id', (req: IUserRequest, res:Response, next:NextFunction) => {
 
     const { id } = req.params;
@@ -137,6 +141,52 @@ forumRouter.get('/last-post/:id', (req: IUserRequest, res:Response, next:NextFun
         return res.status(200).json({
             thread: lastForumPostThread,
             post: lastForumPost
+        });
+    });
+
+});
+
+/**
+ * Get the total of threads within a forum
+ * @param id <number> Id of the forum
+ */
+forumRouter.get('/total-threads/:id', (req: IUserRequest, res:Response, next:NextFunction) => {
+
+    const { id } = req.params;
+    if(isNaN(id as any)) {
+        return next(new HttpException(400, 'Id must be integer'));
+    }
+
+    const processedForums:number[] = [];
+
+    db.task(async t => {
+        let forums = [id];
+        let totalThreads = 0;
+        // BFS search (kinda)
+        do {
+            // Grab the forum
+            const forum = forums[0];
+            // Get its threads
+            const forumThreads = (await t.query('SELECT count(id) FROM threads WHERE parent_forum=$1', [forum]))[0].count;
+            totalThreads += forumThreads;
+
+            // Mark forum as processed
+            processedForums.push(Number(forum));
+
+            // Process child forums
+            const childForums = (await t.query('SELECT id FROM forums WHERE parent_forum=$1', [forum])).map((f:any)=>{return Number(f.id)});
+            for (let i=0;i<childForums.length;i++) {
+                if(!processedForums.includes(childForums[i])) {
+                    forums.push(childForums[i]);
+                }
+            }
+
+            // Delete current forum from array
+            forums.shift();
+        } while(forums.length > 0);
+
+        return res.status(200).json({
+            total: totalThreads,
         });
     });
 
