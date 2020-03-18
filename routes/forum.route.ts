@@ -161,13 +161,13 @@ forumRouter.get('/total-threads/:id', (req: IUserRequest, res:Response, next:Nex
 
     db.task(async t => {
         let forums = [id];
-        let totalThreads = 0;
+        let totalThreads:number = 0;
         // BFS search (kinda)
         do {
             // Grab the forum
             const forum = forums[0];
             // Get its threads
-            const forumThreads = (await t.query('SELECT count(id) FROM threads WHERE parent_forum=$1', [forum]))[0].count;
+            const forumThreads = Number((await t.query('SELECT count(id) FROM threads WHERE parent_forum=$1', [forum]))[0].count);
             totalThreads += forumThreads;
 
             // Mark forum as processed
