@@ -28,7 +28,7 @@ const server = new Server(config.http.port);
 
 // Body parser
 server.app.use(bodyParser.urlencoded({extended:true}));
-server.app.use(bodyParser.json());
+server.app.use(bodyParser());
 
 // Morgan
 server.app.use(Morgan('dev'))
