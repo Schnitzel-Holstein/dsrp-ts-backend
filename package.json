@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/Schnitzel-Holstein/dsrp-ts-backend#readme",
   "dependencies": {
-    "bcrypt": "^3.0.8",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "commander": "^4.1.0",
     "cors": "^2.8.5",
